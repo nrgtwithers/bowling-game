@@ -8,62 +8,95 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Icon -->
     <link rel="shortcut icon" type="image/png" href="assets/images/bowlingball.png" />
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Bowling Game</title>
 </head>
 
 <body>
     <main>
-        <img src="assets/images/logo.png" alt="logo" class="logo"/>
+        <h1>Lets Bowl!</h1>
+        <img src="assets/images/bowlingball.png" alt="logo" class="logo" />
         <div id="buttons" class="buttons">
-                <h4>Pins Hit (Manual Input):</h4>
-                <button type="button">Gutter</button>
-                <button type="button">1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
-                <button type="button">4</button>
-                <button type="button">5</button>
-                <button type="button">6</button>
-                <button type="button">7</button>
-                <button type="button">8</button>
-                <button type="button">9</button>
-                <button type="button">10</button>
+            <span>
+                <h4>Click Number of Pins Knocked Down.</h4>
+                <button type="button" class="btn">0</button>
+                <button type="button" class="btn">1</button>
+                <button type="button" class="btn">2</button>
+                <button type="button" class="btn">3</button>
+                <button type="button" class="btn">4</button>
+                <button type="button" class="btn">5</button>
+                <button type="button" class="btn">6</button>
+                <button type="button" class="btn">7</button>
+                <button type="button" class="btn">8</button>
+                <button type="button" class="btn">9</button>
+                <button type="button" class="btn">10</button>
+            </span>
         </div>
         <div id="scorecard">
-            <table>
-                <tr>
-                    <th>PLAYER NAME</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                    <th>7</th>
-                    <th>8</th>
-                    <th>9</th>
-                    <th>10</th>
-                    <th>TOTAL</th>
-                </tr>
-                <!-- Filler info until JS functions connected -->
-                <tr>
-                    <td>VANESSA WILLIAMS</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>X</td>
-                    <td>300</td>
-                </tr>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">7</th>
+                        <th scope="col">8</th>
+                        <th scope="col">9</th>
+                        <th scope="col">10</th>
+                        <!-- <th scope="col">TOTAL</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <!-- <td>300</td> -->
+                    </tr>
+                    <tr>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                    </tr>
+                </tbody>
             </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>300</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
             <div id="controller-buttons">
-                    <button type="button">Add Player</button>
-                    <button type="button">Reset Scores</button>
-                    <button type="button">End Game</button>
+                <!-- <button type="button" id="addPlayer" class="btn">Add Player</button> -->
+                <button type="button" id="reset" class="btn">Reset Scores</button>
+                <!-- <button type="button" id="end" class="btn">End Game</button> -->
             </div>
         </div>
     </main>
