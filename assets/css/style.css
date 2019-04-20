@@ -1,15 +1,55 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 html, body{
-    background: #fff;
+    background: #ccc;
     font-family: 'Roboto Condensed', sans-serif;
     color: black;
 }
 
 h1{
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;
     text-align: center;
     font-size: 4rem;
     text-shadow: 1px 1.5px #CCC;
+}
+
+main{
+    max-width: 900px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    box-shadow: 5px 0px 10px darkgray, -5px 0px 10px darkgrey;
+    background: white;
+    padding: 30px;
+}
+
+table{
+    margin: auto;
+    border: solid;
+    padding: 0;
+}
+
+th{
+    text-align:left;
+    font-weight: 600;
+    font-size: 2rem;
+    border: dotted;
+    padding: 5px;
+}
+
+td{
+    text-align: left;
+    font-size: 1.5rem;
+    border:dotted;
+    padding: 5px;
+}
+
+div#buttons.buttons, div#controller-buttons{
+    margin:auto;
+    max-width:500px;
+    padding: 40px;
+    text-align: center;
 }
