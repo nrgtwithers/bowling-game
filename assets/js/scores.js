@@ -1,4 +1,9 @@
 // GAME
+// Shorthand for $( document ).ready()
+$(function() {
+    console.log( "ready!" );
+});
+
 var frames = 10;
 var rolls = 2;
 var scores;
@@ -15,10 +20,20 @@ var spare;
 
 // gameScores();
 
+// Totals User Input Frames Scores
+function totalScores(){
+
+}
+
+totalScores();
+
 
 // Reset
 $("#reset").click(function () {
     // $(this).hide()
-    console.log('clicked')
-    location.reload();
+    console.log('reset')
+    // location.reload();
+    $('.pinsHit').empty('');
+    $('.pinScore').empty('');
+    $('#total').empty('');
 })

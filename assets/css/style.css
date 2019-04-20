@@ -14,7 +14,7 @@ img.logo {
 
 h1 {
   font-family: "Lobster", cursive;
-  font-size: 8rem;
+  font-size: 4.5rem !important;
   font-weight: bold;
   text-align: center;
 }
@@ -34,9 +34,6 @@ main {
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  /* height: 100%; */
-  box-shadow: 5px 0px 10px darkgray, -5px 0px 10px darkgrey;
-  /* background: white; */
   padding: 30px;
 }
 
