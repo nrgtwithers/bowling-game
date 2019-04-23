@@ -1,8 +1,7 @@
 var inputButton = [];
 var frameTotals = [];
-// function to add scores
 
-
+// Grabing th values from the button clicked
 $('.btn').click(function () {
     const value = Number($(this).text());
     console.log(value);
@@ -24,8 +23,6 @@ $('.btn').click(function () {
     }
 
     if ($('#firstRoll').text() !== '' && $('#secondRoll').text() !== '') {
-        console.log('hey')
-        console.log(total)
         if ($('#frameOne').text() === '') {
             $('#frameOne').text(total);
             frameTotals.push(total);
@@ -34,7 +31,7 @@ $('.btn').click(function () {
         } else {
             if($('#thirdRoll').text() === ''){
                 $('#thirdRoll').text(value);
-            } else if ($('#secondRoll').text()) {
+            } else if ($('#fourthRoll').text() === '') {
                 $('#fourthRoll').text(value);
             }
         }
@@ -42,13 +39,61 @@ $('.btn').click(function () {
     }
 
     if ($('#thirdRoll').text() !== '' && $('#fourthRoll').text() !== '') {
-        console.log('hey')
-        console.log(total)
+
         if ($('#frameTwo').text() === '') {
             $('#frameTwo').text(total);
             frameTotals.push(total);
             inputButton = [];
             $('#frameTwo').text(frameTotals[1]);
+        } else {
+            if($('#fifthRoll').text() === ''){
+                $('#fifthRoll').text(value);
+            } else if ($('#sixthRoll').text() === '') {
+                $('#sixthRoll').text(value);
+            }
+        }
+    }
+    if ($('#fifthRoll').text() !== '' && $('#sixthRoll').text() !== '') {
+        if ($('#frameThree').text() === '') {
+            $('#frameThree').text(total);
+            frameTotals.push(total);
+            inputButton = [];
+            $('#frameThree').text(frameTotals[2]);
+        } else {
+            if($('#seveththRoll').text() === ''){
+                $('#seventhRoll').text(value);
+            } else if ($('#eighthRoll').text() === '') {
+                $('#eighthRoll').text(value);
+            }
+        }
+    }
+
+    if ($('#seventhRoll').text() !== '' && $('#eighthRoll').text() !== '') {
+        if ($('#frameFour').text() === '') {
+            $('#frameFour').text(total);
+            frameTotals.push(total);
+            inputButton = [];
+            $('#frameFour').text(frameTotals[3]);
+        } else {
+            if($('#ninthRoll').text() === ''){
+                $('#ninthRoll').text(value);
+            } else if ($('#tenthRoll').text() === '') {
+                $('#tenthRoll').text(value);
+            }
+        }
+    }
+    if ($('#ninthRoll').text() !== '' && $('#tenthRoll').text() !== '') {
+        if ($('#frameFive').text() === '') {
+            $('#frameFive').text(total);
+            frameTotals.push(total);
+            inputButton = [];
+            $('#frameFive').text(frameTotals[4]);
+        } else {
+            if($('#eleventhRoll').text() === ''){
+                $('#eleventhRoll').text(value);
+            } else if ($('#twelfthRoll').text() === '') {
+                $('#twelfthRoll').text(value);
+            }
         }
     }
 })
@@ -72,3 +117,4 @@ function reset() {
     })
 }
 
+reset();
