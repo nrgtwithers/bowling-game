@@ -16,6 +16,8 @@
 
 <body>
     <main>
+            <ul id="list"></ul>
+
         <h1>Lets Bowl!</h1>
         <img src="assets/images/bowlingball.png" alt="logo" class="logo" />
         <div id="buttons" class="buttons">
@@ -48,94 +50,50 @@
                         <th colspan='6'>Frame 8</th>
                         <th colspan='6'>Frame 9</th>
                         <th colspan='6'>Frame 10</th>
-                        <!-- <th scope="col">1</th>
-                        <th scope="col">2</th>
-                        <th scope="col">3</th>
-                        <th scope="col">4</th>
-                        <th scope="col">5</th>
-                        <th scope="col">6</th>
-                        <th scope="col">7</th>
-                        <th scope="col">8</th>
-                        <th scope="col">9</th>
-                        <th scope="col">10</th> -->
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='3'></td>
-                        <td colspan='2'></td>
-                        <td colspan='2'></td>
-                        <td colspan='2'></td>
-                        <!-- <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td>
-                        <td class="pinsHit"></td> -->
+                        <td colspan='3' class='pinsHit' id='firstRoll'></td>
+                        <td colspan='3' class='pinsHit' id='secondRoll'></td>
+                        <td colspan='3' class='pinsHit' id='thirdRoll'></td>
+                        <td colspan='3' class='pinsHit' id='fourthRoll'></td>
+                        <td colspan='3' class='pinsHit' id='fifthRoll'></td>
+                        <td colspan='3' class='pinsHit' id='sixthRoll'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <td colspan='3' class='pinsHit'></td>
+                        <!-- Frame10 -->
+                        <td colspan='2' class='pinsHit'></td>
+                        <td colspan='2' class='pinsHit'></td>
+                        <td colspan='2' class='pinsHit'></td>
                     </tr>
                     <tr>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <td colspan='6'></td>
-                        <!-- <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td>
-                        <td class="pinScore"></td> -->
+                        <td colspan='6' class="pinScore" id="frameOne"></td>
+                        <td colspan='6' class='pinScore' id="frameTwo"></td>
+                        <td colspan='6' class='pinScore' id="frameThree"></td>
+                        <td colspan='6' class='pinScore' id="frameFour"></td>
+                        <td colspan='6' class='pinScore' id="frameFive"></td>
+                        <td colspan='6' class='pinScore' id="frameSix"></td>
+                        <td colspan='6' class='pinScore' id="frameSeven"></td>
+                        <td colspan='6' class='pinScore' id="frameEight"></td>
+                        <td colspan='6' class='pinScore' id="frameNine"></td>
+                        <td colspan='6' class='pinScore' id="frameTen" id="total"></td>
                     </tr>
                 </tbody>
             </table>
-            <!-- <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col" colspan='60'>TOTAL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="total" colspan='6'>300</td>
-                    </tr>
-
-                </tbody>
-            </table> -->
 
             <div id="controller-buttons">
-                <!-- <button type="button" id="addPlayer" class="btn">Add Player</button> -->
                 <button type="button" id="reset" class="btn">Reset Scores</button>
-                <!-- <button type="button" id="end" class="btn">End Game</button> -->
             </div>
         </div>
     </main>

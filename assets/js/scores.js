@@ -1,104 +1,74 @@
-//  $( document ).ready()
-$(function () {
-    console.log("ready!");
-});
-
-var frames = 10;
-var rolls = 2;
-var scores= 0;
-var val = [];
+var inputButton = [];
+var frameTotals = [];
 // function to add scores
 
-function gameScores(val) {
-    // Button functioning / testing
-    $("#pin-0").click(function () {
-        console.log(`Gutterball, bummer!`);
-        // add value
-        var val = 0;
-        var zero = $(".pinsHit").text(val);
-    })
-    $("#pin-1").click(function () {
-        console.log(`1`);
-        // add value
-        var val = 1;
-        var one = $(".pinsHit").text(val);
-    })
-    $("#pin-2").click(function () {
-        console.log(`2`);
-        // add value
-        var val = 2;
-        var two = $(".pinsHit").text(val);
-    })
-    $("#pin-3").click(function () {
-        console.log(`3`);
-        // add value
-        var val = 3;
-        var three = $(".pinsHit").text(val);
-    })
-    $("#pin-4").click(function () {
-        console.log(`4`);
-        // add value
-        var val = 4;
-        var four = $(".pinsHit").text(val);
-    })
-    $("#pin-5").click(function () {
-        console.log(`5`);
-        // add value
-        var val = 5;
-        var five = $(".pinsHit").text(val);
-    })
-    $("#pin-6").click(function () {
-        console.log(`6`);
-        // add value
-        var val = 6;
-        var six = $(".pinsHit").text(val);
-    })
-    $("#pin-7").click(function () {
-        console.log(`7`);
-        // add value
-        var val = 7;
-        var seven = $(".pinsHit").text(val);
-    })
-    $("#pin-8").click(function () {
-        console.log(`8`);
-        // add value
-        var val = 8;
-        var eight = $(".pinsHit").text(val);
-    
-    })
-    $("#pin-9").click(function () {
-        console.log(`9`);
-        // add value
-        var val = 9;
-        var nine = $(".pinsHit").text(val);
-    })
-    $("#pin-10").click(function () {
-        console.log(`STRIKE!`);
-        // add value
-        var strike = 10 + 10 + 10;
-        var ten = $(".pinsHit").text(strike);
-    })
 
-// formula
+$('.btn').click(function () {
+    const value = Number($(this).text());
+    console.log(value);
+    inputButton.push(value);
 
-var scores = val + val
+    var total = totalScore(inputButton);
+    if (total < 11) {
 
-}
-gameScores();
+        if ($('#firstRoll').text() === '') {
+            $('#firstRoll').text(value);
+        } else {
+            if ($('#secondRoll').text() ===''){
+                $('#secondRoll').text(value);
+            }
+        }
+    } else {
+        alert('Frame must equal 10 or less.')
 
-// Totals User Input Frames Scores
-// function totalScores(scores) {
-//     $('#total').empty('');
-//     $('#total').text(scores)
-// }
+    }
 
-// totalScores();
+    if ($('#firstRoll').text() !== '' && $('#secondRoll').text() !== '') {
+        console.log('hey')
+        console.log(total)
+        if ($('#frameOne').text() === '') {
+            $('#frameOne').text(total);
+            frameTotals.push(total);
+            inputButton = [];
+            $('#frameOne').text(frameTotals[0]);
+        } else {
+            if($('#thirdRoll').text() === ''){
+                $('#thirdRoll').text(value);
+            } else if ($('#secondRoll').text()) {
+                $('#fourthRoll').text(value);
+            }
+        }
 
+    }
 
-// Reset
-$("#reset").click(function () {
-    console.log('reset')
-    $('.pinsHit').empty('');
-    $('.pinScore').empty('');
-    $('#total').empty('');
+    if ($('#thirdRoll').text() !== '' && $('#fourthRoll').text() !== '') {
+        console.log('hey')
+        console.log(total)
+        if ($('#frameTwo').text() === '') {
+            $('#frameTwo').text(total);
+            frameTotals.push(total);
+            inputButton = [];
+            $('#frameTwo').text(frameTotals[1]);
+        }
+    }
 })
+    
+
+// Totaling score
+function totalScore(arr) {
+    return arr.reduce(function (a, b) {
+        return a + b;
+    })
+}
+
+
+// Reset / Start a new ScoreCard
+function reset() {
+    $("#reset").click(function () {
+        console.log('reset')
+        $('.pinsHit').empty('');
+        $('.pinScore').empty('');
+        $('#total').empty('');
+    })
+}
+
