@@ -45,7 +45,7 @@ $('.btn').click(function () {
             $('#frameTwo').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameTwo').text(frameTotals[1]);
+            $('#frameTwo').text(frameTotals[0] + frameTotals[1]);
         } else {
             if($('#fifthRoll').text() === ''){
                 $('#fifthRoll').text(value);
@@ -59,7 +59,7 @@ $('.btn').click(function () {
             $('#frameThree').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameThree').text(frameTotals[2]);
+            $('#frameThree').text(frameTotals[0] + frameTotals[1] + frameTotals[2]);
         } else {
             if($('#seventhRoll').text() === ''){
                 $('#seventhRoll').text(value);
@@ -74,7 +74,7 @@ $('.btn').click(function () {
             $('#frameFour').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameFour').text(frameTotals[3]);
+            $('#frameFour').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3]);
         } else {
             if($('#ninthRoll').text() === ''){
                 $('#ninthRoll').text(value);
@@ -88,7 +88,7 @@ $('.btn').click(function () {
             $('#frameFive').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameFive').text(frameTotals[4]);
+            $('#frameFive').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4]);
         } else {
             if($('#eleventhRoll').text() === ''){
                 $('#eleventhRoll').text(value);
@@ -102,7 +102,7 @@ $('.btn').click(function () {
             $('#frameSix').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameSix').text(frameTotals[5]);
+            $('#frameSix').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4] + frameTotals[5]);
         } else {
             if($('#thirteenthRoll').text() === ''){
                 $('#thirteenthRoll').text(value);
@@ -116,7 +116,7 @@ $('.btn').click(function () {
             $('#frameSeven').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameSeven').text(frameTotals[6]);
+            $('#frameSeven').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4] + frameTotals[5] + frameTotals[6]);
         } else {
             if($('#fifteenthRoll').text() === ''){
                 $('#fifteenthRoll').text(value);
@@ -130,7 +130,7 @@ $('.btn').click(function () {
             $('#frameEight').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameEight').text(frameTotals[7]);
+            $('#frameEight').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4] + frameTotals[5] + frameTotals[6] + frameTotals[7]);
         } else {
             if($('#seventeenthRoll').text() === ''){
                 $('#seventeenthRoll').text(value);
@@ -144,7 +144,7 @@ $('.btn').click(function () {
             $('#frameNine').text(total);
             frameTotals.push(total);
             inputButton = [];
-            $('#frameNine').text(frameTotals[8]);
+            $('#frameNine').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4] + frameTotals[5] + frameTotals[6] + frameTotals[7] + frameTotals[8]);
         } else {
             if($('#nineteenthRoll').text() === ''){
                 $('#nineteenthRoll').text(value);
@@ -164,13 +164,17 @@ $('.btn').click(function () {
             $('#frameTen').text(finalTotal);
             finalPins.push(finalTotal);
             inputButton = [];
-            $('#frameTen').text(finalPins[0]);
-            console.log(finalPins[0])
+            console.log("total is "+ finalTotal)
+            $('#frameTen').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4] + frameTotals[5] + frameTotals[6] + frameTotals[7] + frameTotals[8] + finalTotal);
         } 
         
     }
 })
     
+// Verify Strike
+// Verify Spare
+
+
 
 // Totaling score
 function totalScore(arr) {
@@ -180,8 +184,8 @@ function totalScore(arr) {
 }
 
 function finalScore(arr){
-    return arr.reduce(function(d,e,f){
-        return d + e + f;
+    return arr.reduce(function(d,e){
+        return d + e;
     })
 }
 
