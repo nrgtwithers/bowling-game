@@ -156,10 +156,12 @@ $('.btn').click(function () {
         }
     }
 
-    var finalTotal = finalScore(inputButton);
+    // var finalTotal = finalScore(inputButton); 
 
 
     if ($('#nineteenthRoll').text() !== '' && $('#twentiethRoll').text() !== '' && $('#twenty-firstRoll').text() !== '') {
+    var finalTotal = finalScore(inputButton); 
+
         if ($('#frameTen').text() === '') {
             $('#frameTen').text(finalTotal);
             finalPins.push(finalTotal);
