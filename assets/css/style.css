@@ -87,3 +87,11 @@ div#controller-buttons {
 .btn:hover {
   background: #f4f4f4;
 }
+
+div#warning{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
