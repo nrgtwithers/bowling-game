@@ -1,6 +1,5 @@
 var inputButton = [];
 var frameTotals = [];
-var finalPins = [0];
 var spare = 10; // Adds to spare for spare scoring
 var strike = 10 + 10; // Adds to become full strike total
 
