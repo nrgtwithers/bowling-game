@@ -35,9 +35,6 @@ $('.btn').click(function () {
                 }
             }
         }
-    } else {
-        $('#warning').text('Frames must equal to 10. Score is not valid if it exceeds 10.')
-        // Bug
     }
 
     // Scoring System
@@ -289,31 +286,6 @@ $('.btn').click(function () {
             inputButton = [];
             $('#frameNine').text(frameTotals[0] + frameTotals[1] + frameTotals[2] + frameTotals[3] + frameTotals[4] + frameTotals[5] + frameTotals[6] + frameTotals[7] + frameTotals[8]);
         } else {
-            // if ($('#nineteenthRoll').text() === '') {
-            //     if (value === 10) {
-            //         $('#nineteenthRoll').text('X');
-            //         // $('#secondRoll').text('X');
-            //         total = total + strike;
-            //         if($('#nineteenthRoll').text() !== ''){
-            //             if ($('#twentiethRoll').text() === ''){
-            //                 $('#twentiethRoll').text(value);
-            //             }
-            //         } else if ($('#nineteenthRoll').text() !== '' && $('#twentiethRoll').text() !== ''){
-            //             $('#twenty-firstRoll').text(value);
-            //         }
-            //     } else {
-            //         $('#nineteenthRoll').text(value);
-            //     }
-            // } else {
-            //     if ($('#twentiethRoll').text() === '') {
-            //         if (inputButton[0] + inputButton[1] === 10) {
-            //             $('#twentiethRoll').text('/');
-            //             total = total - inputButton[1] + spare;
-            //         } else {
-            //             $('#twentiethRoll').text(value);
-            //         }
-            //     }
-            // }
             if ($('#nineteenthRoll').text() === '') {
                 if (value === 10) {
                     $('#nineteenthRoll').text('X');
@@ -325,14 +297,18 @@ $('.btn').click(function () {
                 if (value === 10) {
                     $('#twentiethRoll').text('X');
                     total = total + strike;
-                } else {
+                } else if (inputButton[0] + inputButton[1] === 10) {
+                    $('#twentiethRoll').text('/');
+                    total = total - inputButton[1] + spare;
+                } else if (inputButton[0] + inputButton[1] < 10){
                     $('#twentiethRoll').text(value);
+                } else {
+                    $('#warning').text('Frames must equal to 10. Score is not valid if it exceeds 10.')
                 }
-                $('#twenty-firstRoll').text(value);
             } else if ($('#twenty-firstRoll').text() === '') {
                 if (value === 10) {
                     $('#twenty-firstRoll').text('X');
-                    total = total + strike;
+                    total = total;
                 } else {
                     $('#twenty-firstRoll').text(value);
                 }
@@ -340,11 +316,9 @@ $('.btn').click(function () {
         }
     }
 
-    // var finalTotal = finalScore(inputButton); 
 
 
     if ($('#nineteenthRoll').text() !== '' && $('#twentiethRoll').text() !== '' && $('#twenty-firstRoll').text() !== '') {
-        // var finalTotal = finalScore(inputButton);
         if ($('#frameTen').text() === '') {
             $('#frameTen').text(total);
             frameTotals.push(total);
