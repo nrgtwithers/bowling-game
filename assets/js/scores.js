@@ -309,8 +309,10 @@ $('.btn').click(function () {
                 if (value === 10) {
                     $('#twenty-firstRoll').text('X');
                     total = total;
-                } else {
+                } else if (inputButton[2] < 10 ){
                     $('#twenty-firstRoll').text(value);
+                } else {
+                    $('#warning').text('Frames must equal to 10. Score is not valid if it exceeds 10.')
                 }
             }
         }
@@ -332,27 +334,6 @@ $('.btn').click(function () {
     }
 })
 
-// Verify Strike
-
-function verifyStrike() {
-    if (total === 10) {
-        var strike = 10 + 10 + 10;
-        $('.pinsHit').text('X')
-        // Change value scores to equate 30
-    }
-}
-
-// Verify Spare
-
-function verifySpare() {
-    if (value + value) {
-        var spare = 10 + value;
-        $('.pinsHit').text('/')
-        // change values to 10 + the pins hit first
-    }
-}
-
-
 // Totaling score
 function totalScore(arr) {
     return arr.reduce(function (a, b) {
@@ -360,21 +341,11 @@ function totalScore(arr) {
     })
 }
 
-function finalScore(arr) {
-    return arr.reduce(function (d, e) {
-        return d + e;
-    })
-}
-
-
 // Reset / Start a new ScoreCard
 function reset() {
     $("#reset").click(function () {
         console.log('reset')
         location.reload();
-        // $('.pinsHit').empty('');
-        // $('.pinScore').empty('');
-        // $('#total').empty('');
     })
 }
 
